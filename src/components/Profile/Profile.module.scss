@@ -1,0 +1,30 @@
+.profileContainer {
+    display: flex;
+    min-height: 1vh;
+    padding: .5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: center;
+
+    > img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    div {
+        align-items: center;
+        align-content: center;
+        margin-top: 0.75rem;
+        margin-right: 2rem;
+    }
+
+    div strong {
+        font-size: 0.5rem;
+        font-weight: 600;
+        color: var(--title);
+        font-family: sans-serif;
+    }
+    
+}
