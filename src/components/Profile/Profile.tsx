@@ -1,13 +1,14 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import styles from '../Profile/Profile.module.scss';
+import { Avatar } from '@material-ui/core';
 
 export function Profile() {
-    
-
     return (
         <div className={styles.profileContainer}>
-            <img src="https://github.com/RaianSores.png" alt="Raian Soares"/>     
+            <Avatar 
+                alt="Raian Soares" 
+                src="https://github.com/RaianSores.png"
+            />
         </div>
     );
 }

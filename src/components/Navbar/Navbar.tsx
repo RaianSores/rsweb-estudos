@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 const Navbar = () => {
     return (
         <Container>
-            <Header/>
+           <Header/>
         </Container>
     )
 }

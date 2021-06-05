@@ -6,10 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Profile } from "../Profile/Profile";
+import { createMuiTheme, Menu, MenuItem, MuiThemeProvider } from "@material-ui/core";
+import PopupState, { bindMenu, bindTrigger } from "material-ui-popup-state";
 
 import styles from '../Header/Header.module.scss';
-import { Profile } from "../Profile/Profile";
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +23,23 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#00FF80',
+      main: '#00CC66',
+      dark: '#00994D',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+  },
+});
 
 export default function Header() {
   const classes = useStyles();
@@ -36,7 +54,23 @@ export default function Header() {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <MuiThemeProvider theme={theme}>
+              <PopupState variant="popover" popupId="popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button variant="contained" {...bindTrigger(popupState)} color="primary">
+                      <MenuIcon color="action" />
+                    </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>Home</MenuItem>
+                      <MenuItem onClick={popupState.close}>Dashboard</MenuItem>
+                      <MenuItem onClick={popupState.close}>Contatos</MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+            </MuiThemeProvider>
+
           </IconButton>
           <Typography variant="h5" className={classes.title} component="div">
             Mindset
