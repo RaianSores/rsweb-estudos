@@ -1,4 +1,22 @@
-.container div{
+.container div {
     background-color: #05d78a;
     flex-grow: 1;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: var(--font-primary);
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-family: var(--font-secundary);
+        align-items: center;
+        align-content: center;
+    }
+
+    img {
+        padding: 0.5rem;
+    }
 }
+

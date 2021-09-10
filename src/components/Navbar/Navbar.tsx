@@ -1,12 +1,10 @@
-import React from 'react';
-import { Container } from '@material-ui/core';
-import Header from '../Header/Header';
+import React from 'react'
 
 const Navbar = () => {
     return (
-        <Container>
-           <Header/>
-        </Container>
+        <div>
+            
+        </div>
     )
 }
 
