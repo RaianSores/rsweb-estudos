@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link';
-import { FiLogIn } from 'react-icons/fi';
 
 import styles from '../Header/Header.module.scss';
 
@@ -35,7 +34,7 @@ export default function Header() {
           </Typography>
           <Button color="inherit">
             <Link href="/Login">
-              <a><FiLogIn /> Sign in</a>
+              <a> Sign in</a>
             </Link>
           </Button>
         </Toolbar>
