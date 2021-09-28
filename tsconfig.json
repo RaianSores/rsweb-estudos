@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/Cart/Card.js", "src/components/Cart/CartItem/CartItem.tsx", "src/pages/index.jsx"  ],
+, "src/components/Cart/Card.js", "src/components/Cart/CartItem/CartItem.tsx", "src/pages/index.jsx", "src/components/Header/Header.tsx", "src/components/Button/Button.jsx"  ],
   "exclude": [
     "node_modules"
   ]

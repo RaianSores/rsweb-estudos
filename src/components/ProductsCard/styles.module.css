@@ -1,7 +1,8 @@
 .product {
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 100ms ease-in-out;
+    background: #f9f9f9;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    transition: transform 500ms ease-in-out;
+    border-radius: 0.5rem;
   }
   
   .product:hover {
